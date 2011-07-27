@@ -1,0 +1,22 @@
+<!DOCTYPE webprojectsession>
+<webprojectsession>
+  <session usePreviewPrefix="0" previewPrefix="" >
+    <itemcursorpositions/>
+    <treestatus>
+      <openfolder url="app" />
+      <openfolder url="app/controllers" />
+      <openfolder url="app/models" />
+      <openfolder url="app/views" />
+      <openfolder url="app/views/calendar" />
+      <openfolder url="app/views/events" />
+      <openfolder url="app/views/layouts" />
+      <openfolder url="app/views/sujits" />
+      <openfolder url="app/views/user_sessions" />
+      <openfolder url="config" />
+      <openfolder url="db" />
+      <openfolder url="db/migrate" />
+      <openfolder url="public" />
+      <openfolder url="public/stylesheets" />
+    </treestatus>
+  </session>
+</webprojectsession>

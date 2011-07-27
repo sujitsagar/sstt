@@ -1,0 +1,2 @@
+module SujitsHelper
+end

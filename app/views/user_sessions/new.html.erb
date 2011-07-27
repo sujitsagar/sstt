@@ -1,0 +1,30 @@
+<% @sujit = @user_session %>
+<%= form_for(@sujit) do |f| %>
+  <% if @sujit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sujit.errors.count, "error") %> prohibited this sujit from being saved:</h2>
+
+      <ul>
+      <% @sujit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </div>
+<div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+<div class="field">
+    <%= f.check_box :remember_me %><br />
+    <%= f.label :remember_me %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Login" %>
+  </div>
+<% end %>

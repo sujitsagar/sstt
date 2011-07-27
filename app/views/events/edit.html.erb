@@ -1,0 +1,8 @@
+<h1>Editing event</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %> |
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Destroy', @event, :confirm => 'Are you sure?', :method => :delete %>

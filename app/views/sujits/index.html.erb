@@ -1,0 +1,23 @@
+<h1>Listing sujits</h1>
+
+<table>
+  <tr>
+    <th>Snss</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sujits.each do |sujit| %>
+  <tr>
+    <td><%= sujit.snss %></td>
+    <td><%= link_to 'Show', sujit %></td>
+    <td><%= link_to 'Edit', edit_sujit_path(sujit) %></td>
+    <td><%= link_to 'Destroy', sujit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sujit', new_sujit_path %>
