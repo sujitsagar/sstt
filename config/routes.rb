@@ -1,8 +1,8 @@
 Timetable::Application.routes.draw do
+  root :to => "user_sessions#new"
   get "user/new"
 
-  get "user/edit"
-
+  
   get "events/new"
 
   get "events/edit"
@@ -12,8 +12,8 @@ Timetable::Application.routes.draw do
 
   resources :user_sessions
 
-	match 'login' => "user_sessions#new",      :as => :login
-	match 'logout' => "user_sessions#destroy", :as => :logout
+  match 'login' => "user_sessions#new",      :as => :login
+  match 'logout' => "user_sessions#destroy", :as => :logout
 
   get "user_sessions/new"
 

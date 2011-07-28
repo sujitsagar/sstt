@@ -6,13 +6,14 @@ Timetable::Application.routes.draw do
   get "events/new"
 
   get "events/edit"
+  resources :users
   resources :events
   resources :sujits
 
   resources :user_sessions
 
-	match 'login' => "user_sessions#new",      :as => :login
-	match 'logout' => "user_sessions#destroy", :as => :logout
+  match 'login' => "user_sessions#new",      :as => :login
+  match 'logout' => "user_sessions#destroy", :as => :logout
 
   get "user_sessions/new"
 
