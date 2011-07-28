@@ -68,7 +68,6 @@
     <item url="public/422.html" uploadstatus="1" />
     <item url="public/500.html" uploadstatus="1" />
     <item url="public/favicon.ico" uploadstatus="1" />
-    <item url="public/index.html" uploadstatus="1" />
     <item url="public/robots.txt" uploadstatus="1" />
     <item url="script/" uploadstatus="1" />
     <item url="script/rails" uploadstatus="1" />

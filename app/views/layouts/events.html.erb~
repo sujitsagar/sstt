@@ -7,10 +7,11 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
- <div id="nav">
-            <%= link_to "Login", :login %> | <%= link_to "Logout", :logout %>
+ <div id="nav" align="center">
+            <%= link_to "Login", :login %> | <%= link_to "Logout", :logout %> | <%= link_to 'New Event', new_event_path %>
     </div>
+<table align='center'><tr><td>
 <%= yield %>
-
+</td></tr></table>
 </body>
 </html>

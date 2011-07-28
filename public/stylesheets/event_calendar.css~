@@ -22,6 +22,7 @@
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #d5d5d5;
+ 
 }
 
 /* Month name header & links */
@@ -172,11 +173,13 @@ a.ec-day-link {
 
 .ec-event :hover {
   /* doesn't look as good as js highlighting */
+  color: white;
   background-color: #225484 ; 
 }
 
 .ec-event-bg a {
-  color: green;
+  color: black;
+ background-color:yellow;
 }
 
 /* used to distinguish non-all_day events */

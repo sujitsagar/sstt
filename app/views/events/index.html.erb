@@ -1,23 +1,36 @@
 <h1 align="center">Listing all events</h1>
 <p align="center" style="color:black"><%= will_paginate(@events) %></p>
-<table border="1" cellpadding="5" cellspacing="1" width="1200">
+<table border="1" cellpadding="15" cellspacing="1" width="1200" > 
   <tr bgcolor="#7F0E30" style="color:white">
     <th width="10%">Name</th>
     <th width="">Details</th>
-    <th width="18%">Start at</th>
-    <th width="18%">End at</th>
+    <th width="10%">Start at</th>
+    <th width="10%">End at</th>
+    <th width="12%">Time Remaining</th>
     </tr>
 
 <% @events.each do |event| %>
 <% if event.status? %>
   <tr bgcolor="#CFFF6D">
+<% else if event.end_at < Time.now %>
+  <tr bgcolor="#FFCC99">
 <% else %>
   <tr bgcolor="#69FAFF">
-<% end %>
+<% end end %>
     <td><H3 style="color:black"><%= link_to event.name, event %></H3></td>
     <td><%= event.details %></td>
-    <td align="center"><%= event.start_at %></td>
-    <td align="center"><%= event.end_at %></td></tr>
+    <td align="center" style=" font-size:15px;"><%= event.start_at.strftime("%d-%m-%Y %I:%M %p")   %><% Time.now %></td>
+    <td align="center" style=" font-size:15px;"><%= event.end_at.strftime("%d-%m-%Y %I:%M %p") %></td>
+    <td align="center">
+<% if event.end_at > Time.now %> 
+<%= distance_of_time_in_words( event.end_at , Time.now , include_seconds = true ) %>
+<% else if event.status? %>
+<%= "Time is up" %><br/>
+<% else %>
+<%= "Time is up" %><br/>
+( <%= distance_of_time_in_words( event.end_at , Time.now , include_seconds = true ) %> )
+<% end end %>
+</td></tr>
 <% end %>
 </table>
 <br/>

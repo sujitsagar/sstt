@@ -22,6 +22,7 @@
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #d5d5d5;
+ 
 }
 
 /* Month name header & links */
@@ -177,7 +178,8 @@ a.ec-day-link {
 }
 
 .ec-event-bg a {
-  color: green;
+  color: black;
+ 
 }
 
 /* used to distinguish non-all_day events */

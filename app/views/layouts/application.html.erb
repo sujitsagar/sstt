@@ -8,8 +8,15 @@
 </head>
 <body>
  <div id="nav" align="center">
-            <%= link_to "Login", :login %> | <%= link_to "Logout", :logout %> | <%= link_to 'New Event', new_event_path %>
+<% if current_user.object_id.nil? %>
+<%= link_to "Login", :login %> 
+<% else %>
+<%= link_to "Logout", :logout %> 
+<% end %>
+| <%= link_to 'New Event', new_event_path %> | <%= link_to 'All Events', events_path %> |
+<%= link_to 'Calendar', calendar_path %>
     </div>
+<br/><br/>
 <%= yield %>
 
 </body>

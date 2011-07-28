@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  include ActionView::Helpers::DateHelper
+  
   helper_method :current_user_session, :current_user
 
   private

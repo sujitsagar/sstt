@@ -17,7 +17,7 @@
 
 <p>
   <b>End at:</b>
-  <%= @event.end_at %>
+  <%= @event.end_at.getlocal %>
 </p>
 
 <p>
@@ -26,3 +26,7 @@
 </p>
 
 
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %> |
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Destroy', @event, :confirm => 'Are you sure?', :method => :delete %>

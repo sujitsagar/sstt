@@ -2,7 +2,7 @@ Timetable::Application.routes.draw do
   get "events/new"
 
   get "events/edit"
-
+  resources :events
   resources :sujits
 
   resources :user_sessions
