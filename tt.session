@@ -11,7 +11,7 @@
       <openfolder url="app/views/calendar" />
       <openfolder url="app/views/events" />
       <openfolder url="app/views/layouts" />
-      <openfolder url="app/views/user" />
+      <openfolder url="app/views/users" />
       <openfolder url="app/views/user_sessions" />
       <openfolder url="config" />
       <openfolder url="db" />
