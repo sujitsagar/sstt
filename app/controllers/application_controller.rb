@@ -27,6 +27,16 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    def require_sujit
+      logger.debug "ApplicationController::require_sujit"
+      unless current_user.id == 1 
+        store_location
+        flash[:notice] = "You must be logged in as sujitsagar to access this page"
+        redirect_to new_user_session_url
+        return false
+      end
+    end
+
     def require_no_user
       logger.debug "ApplicationController::require_no_user"
       if current_user

@@ -1,7 +1,12 @@
 Timetable::Application.routes.draw do
+  get "user/new"
+
+  get "user/edit"
+
   get "events/new"
 
   get "events/edit"
+  resources :users
   resources :events
   resources :sujits
 
